@@ -1,4 +1,4 @@
-### Start / Stop Kafka
+## Start / Stop Kafka
 ~~~shell
 	brew services start zookeeper
 	brew services start kafka
@@ -8,10 +8,10 @@
 	brew services stop zookeeper
 ~~~
 
-### Topics
+## Topics
 * List:
 ~~~shell
-	kafka-topics --bootstrap-server localhost:9092 --list
+  kafka-topics --bootstrap-server localhost:9092 --list
 ~~~
 
 * Create: 
