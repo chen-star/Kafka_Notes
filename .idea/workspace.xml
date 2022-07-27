@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ConsumerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo_Callback.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Producer_Callback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo_Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Producer_Keys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "nodejs_package_manager_path": "npm",
@@ -69,7 +68,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Consumer_GraceShutDown">
+  <component name="RunManager" selected="Application.Producer_Keys">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Consumer" />
       <module name="kafka.basics.main" />
@@ -77,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Consumer_GraceShutDown" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Consumer_GraceShutDown" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Consumer_GraceShutDown" />
       <module name="kafka.basics.main" />
       <method v="2">
@@ -105,11 +104,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ConsumerDemo" />
+      <item itemvalue="Application.Consumer_GraceShutDown" />
+      <item itemvalue="Application.ProducerDemo" />
+      <item itemvalue="Application.Producer_Callback" />
+      <item itemvalue="Application.Producer_Keys" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Producer_Keys" />
         <item itemvalue="Application.Consumer_GraceShutDown" />
         <item itemvalue="Application.ConsumerDemo" />
-        <item itemvalue="Application.Producer_Keys" />
         <item itemvalue="Application.Producer_Callback" />
         <item itemvalue="Application.ProducerDemo" />
       </list>
@@ -123,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658939174271</updated>
-      <workItem from="1658939177115" duration="5051000" />
+      <workItem from="1658939177115" duration="5400000" />
     </task>
     <servers />
   </component>
