@@ -2,6 +2,8 @@
 
 [Official Doc](https://kafka.apache.org/documentation/#gettingStarted)
 
+---
+---
 
 ## Kafka Theory
 
@@ -89,6 +91,8 @@
 
 * Exactly once
 
+---
+---
 
 ## CLI Commands
 [commands.md](CLI_commands.md)
