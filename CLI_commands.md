@@ -8,6 +8,7 @@
 	brew services stop zookeeper
 ~~~
 
+
 ## Topics
 * List:
 ~~~shell
@@ -29,43 +30,68 @@
     kafka-topics --bootstrap-server localhost:9092 --delete --topic first_topic
 ~~~
 
-### Producers
+
+## Producers
+* Produce:
 ~~~shell
-	Produce: 
-	  kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic 
-	Produce with properties: 
-	  ... --producer-property acks=all
-	Produce with key: 
-	  ... --property parse.key=true --property key.separator=:
+    kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic 
 ~~~
 
-### Consumers
-
+* Produce with properties
 ~~~shell
-	Consume: 
-	  kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic
-	Consume from beginning: 
-	  ... --from-beginning
-	Consume display key, values and timestamp: 
-	  ... --formatter kafka.tools.DefaultMessageFormatter --property print.timestamp=true --property print.key=true --property print.value=true
+    ... --producer-property acks=all
 ~~~
 
-### Consumer Group
+* Produce with key: 
 ~~~shell
-	Consume: 
-	  ... --group my-first-cg
-	List: 
-	  kafka-consumer-groups --bootstrap-server localhost:9092 --list
-	Describe: 
-	  kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group my-first-cg
+    ... --property parse.key=true --property key.separator=:
 ~~~
 
-### Consumer reset offset
+
+## Consumers
+* Consume
 ~~~shell
-	Reset to beginning of all partitions: 
-	  kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-cg --reset-offsets --to-earliest  --execute --all-topics
-	Shift forward by 2: 
-	  kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-cg --reset-offsets --shift-by 2 --execute --all-topics
-	Shift backward by 2: 
-	  ... --shift-by -2 ...
+    kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic
+~~~
+
+* Consume from beginning
+~~~shell
+    ... --from-beginning
+~~~
+
+* Consume display key, values and timestamp
+~~~shell
+    ... --formatter kafka.tools.DefaultMessageFormatter --property print.timestamp=true --property print.key=true --property print.value=true
+~~~
+
+## Consumer Group
+* Consume
+~~~shell
+    ... --group my-first-cg
+~~~
+
+* List
+~~~shell
+    kafka-consumer-groups --bootstrap-server localhost:9092 --list
+~~~
+
+* Describe
+~~~shell
+    kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group my-first-cg
+~~~
+
+## Consumer reset offset
+* Reset to beginning of all partitions
+~~~shell
+    kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-cg --reset-offsets --to-earliest  --execute --all-topics
+~~~
+
+* Shift forward by 2
+~~~shell
+    kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-cg --reset-offsets --shift-by 2 --execute --all-topics
+~~~
+
+* Shift backward by 2: 
+~~~shell
+    ... --shift-by -2 ...
 ~~~
