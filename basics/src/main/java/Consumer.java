@@ -10,9 +10,9 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
-public class ConsumerDemo {
+public class Consumer {
 
-    private static final Logger log = LoggerFactory.getLogger(ProducerDemo.class.getSimpleName());
+    private static final Logger log = LoggerFactory.getLogger(Producer.class.getSimpleName());
 
     public static void main(String[] args) {
         log.info("I'm consumer");

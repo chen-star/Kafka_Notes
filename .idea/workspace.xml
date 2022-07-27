@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ConsumerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo_Callback.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Producer_Callback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/src/main/java/ProducerDemo_Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/java/Producer_Keys.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,30 +69,37 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ConsumerDemo">
-    <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ConsumerDemo" />
+  <component name="RunManager" selected="Application.Consumer_GraceShutDown">
+    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Consumer" />
       <module name="kafka.basics.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProducerDemo" />
+    <configuration name="Consumer_GraceShutDown" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Consumer_GraceShutDown" />
       <module name="kafka.basics.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerDemo_Callback" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProducerDemo_Callback" />
+    <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Producer" />
       <module name="kafka.basics.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerDemo_Keys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProducerDemo_Keys" />
+    <configuration name="Producer_Callback" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Producer_Callback" />
+      <module name="kafka.basics.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producer_Keys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Producer_Keys" />
       <module name="kafka.basics.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -97,9 +107,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Consumer_GraceShutDown" />
         <item itemvalue="Application.ConsumerDemo" />
-        <item itemvalue="Application.ProducerDemo_Keys" />
-        <item itemvalue="Application.ProducerDemo_Callback" />
+        <item itemvalue="Application.Producer_Keys" />
+        <item itemvalue="Application.Producer_Callback" />
         <item itemvalue="Application.ProducerDemo" />
       </list>
     </recent_temporary>
@@ -112,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658939174271</updated>
-      <workItem from="1658939177115" duration="4546000" />
+      <workItem from="1658939177115" duration="5051000" />
     </task>
     <servers />
   </component>

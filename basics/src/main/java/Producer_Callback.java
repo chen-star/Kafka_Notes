@@ -5,9 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class ProducerDemo_Callback {
+public class Producer_Callback {
 
-    private static final Logger log = LoggerFactory.getLogger(ProducerDemo_Callback.class.getSimpleName());
+    private static final Logger log = LoggerFactory.getLogger(Producer_Callback.class.getSimpleName());
 
     public static void main(String[] args) {
         // create producer properties
