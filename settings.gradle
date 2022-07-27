@@ -1,3 +1,8 @@
 rootProject.name = 'kafka'
 include 'basics'
+include 'demo_projects'
+include 'demo_projects:wiki-opensearch'
+findProject(':demo_projects:wiki-opensearch')?.name = 'wiki-opensearch'
+include 'demo_projects:wiki-opensearch:producer_wikimedia'
+findProject(':demo_projects:wiki-opensearch:producer_wikimedia')?.name = 'producer_wikimedia'
 

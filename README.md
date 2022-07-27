@@ -57,8 +57,35 @@
 #### ACKs
 * Producers can choose to receive ACK of data writes:
   * acks=0, Producers won't wait for ACK
+    * Producers consider message as 'written successfully' the moment the message was sent without waiting for the broker to accept it. 
   * acks=1, Producers will wait for leader's ACK
-  * acks=all, Leader + Replica's ACK
+    * Default for Kafka v1.0 to v2.8.
+  * acks=all / acks=-1, Leader + Replica's ACK
+    * Default for Kafka 3.0+
+    * The leader checks to see if there are enough in-sync replicas for safely writing the message 
+      * controlled by the broker setting `min.insync.replicas`
+        * eg. min.insync.replicas=2: at least leader and 1 replica need to ack
+
+
+#### Producer Retries
+* In case of transient failures, developers are expected to handle exceptions; otherwise data will be lost.
+* There's a `retries` setting
+  * defaults to 0 for Kafka <= 2.0
+  * defaults to Integer.MAX_VALUE for Kafka >= 2.1
+* The `retry.backoff.ms` is by default 100 ms
+* Retries are bounded by a timeout, since Kafka 2.1, you can set: `delivery.timeout.ms=120000`(2 min)
+
+
+#### Idempotent Producer
+* The producer can introduce duplicate messages in Kafka due to network errors
+* They are default since Kafka 3.0, `enable.idempotence=true`
+* They come with:
+  * retries=Integer.MAX_VALUE
+  * max.in.flight.request=5 (Kafka >= 1.0)
+  * acks=all
+
+#### Message Compression at Producer
+
 
 ---
 

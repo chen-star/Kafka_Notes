@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/basics/src/main/java/Consumer_CooperativeRebalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikiMediaChangeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +65,14 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Consumer_CooperativeRebalance">
+  <component name="RunManager" selected="Application.WikimediaChangesProducer">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Consumer" />
       <module name="kafka.basics.main" />
@@ -89,13 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Producer_Callback" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Producer_Callback" />
-      <module name="kafka.basics.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Producer_Keys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Producer_Keys" />
       <module name="kafka.basics.main" />
@@ -103,20 +101,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WikimediaChangesProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WikimediaChangesProducer" />
+      <module name="kafka.demo_projects.wiki-opensearch.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.WikimediaChangesProducer" />
       <item itemvalue="Application.Consumer_CooperativeRebalance" />
       <item itemvalue="Application.ConsumerDemo" />
       <item itemvalue="Application.Consumer_GraceShutDown" />
-      <item itemvalue="Application.Producer_Callback" />
       <item itemvalue="Application.Producer_Keys" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WikimediaChangesProducer" />
         <item itemvalue="Application.Consumer_CooperativeRebalance" />
         <item itemvalue="Application.Producer_Keys" />
         <item itemvalue="Application.Consumer_GraceShutDown" />
         <item itemvalue="Application.ConsumerDemo" />
-        <item itemvalue="Application.Producer_Callback" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658939174271</updated>
-      <workItem from="1658939177115" duration="6143000" />
+      <workItem from="1658939177115" duration="13241000" />
     </task>
     <servers />
   </component>
