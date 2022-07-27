@@ -11,7 +11,7 @@
 ## Topics
 * List:
 ~~~shell
-  kafka-topics --bootstrap-server localhost:9092 --list
+    kafka-topics --bootstrap-server localhost:9092 --list
 ~~~
 
 * Create: 
