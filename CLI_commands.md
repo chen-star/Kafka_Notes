@@ -64,6 +64,7 @@
     ... --formatter kafka.tools.DefaultMessageFormatter --property print.timestamp=true --property print.key=true --property print.value=true
 ~~~
 
+
 ## Consumer Group
 * Consume
 ~~~shell
@@ -79,6 +80,7 @@
 ~~~shell
     kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group my-first-cg
 ~~~
+
 
 ## Consumer reset offset
 * Reset to beginning of all partitions
