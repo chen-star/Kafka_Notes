@@ -82,6 +82,23 @@
 * If you have more consumers than partitions, some consumers will be inactive.
 * Can have multiple consumer groups on the same topic.
 
+* Partition Re-balance
+  * Re-balance happens when a consumer leaves or joins a group. Also happens if admin adds new partition into a topic.
+  * Eager Re-balance
+    * All consumer stops, give up their membership of partitions.
+    * They re-join the consumer group and get a new partition assignment.
+    * Consumers don't necessarily get back the same partitions as they used to.
+  * Cooperative Re-balance (Incremental Re-balance)
+    * Reassigning a small subset of partitions from one consumer to another.
+    * Other consumers that don't have reassigned partitions can still process uninterrupted.
+    * Can go through several iterations to find a 'stable' assignment.
+
+* Static Membership
+  * By default, when a consumer leaves a group, its partitions are revoked and re-assigned.
+  * If it joins back, it will have a new 'member ID' and new partitions assigned.
+  * If you specify group.instance.id, it makes the consumer a static member.
+  * Upon leaving, the consumer has up to session.timeout.ms to join back and get back its partitions, without triggering a re-balance. 
+
 #### Delivery Semantics
 * At least once
   * Offsets are committed after the message is processed.
