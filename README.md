@@ -5,8 +5,6 @@
 
 ## Kafka Theory
 
-![](images/IMG_4007 2.jpeg)
-
 ### Broker & Topic
 
 #### Broker
