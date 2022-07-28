@@ -139,6 +139,8 @@
   * Offsets are committed as soon as messages are received.
 
 * Exactly once
+  * Can be achieved for Kafka => Kafka workflows using the Transactional API.
+  * For Kafka => Sink workflows, use an idempotent consumer.
 
 ---
 ---

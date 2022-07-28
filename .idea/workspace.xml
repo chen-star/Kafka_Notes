@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/consumer_opensearch/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/consumer_opensearch/src/main/java/OpenSearchConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikiMediaChangeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/producer_wikimedia/src/main/java/WikiMediaChangeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/producer_wikimedia/src/main/java/WikimediaChangesProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,25 +66,21 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WikimediaChangesProducer">
-    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Consumer" />
-      <module name="kafka.basics.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.OpenSearchConsumer">
     <configuration name="Consumer_CooperativeRebalance" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Consumer_CooperativeRebalance" />
       <module name="kafka.basics.main" />
@@ -86,41 +88,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Consumer_GraceShutDown" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Consumer_GraceShutDown" />
-      <module name="kafka.basics.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Producer_Keys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Producer_Keys" />
-      <module name="kafka.basics.main" />
+    <configuration name="OpenSearchConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OpenSearchConsumer" />
+      <module name="kafka.demo_projects.wiki-opensearch.consumer_opensearch.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="WikimediaChangesProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WikimediaChangesProducer" />
-      <module name="kafka.demo_projects.wiki-opensearch.main" />
+      <module name="kafka.demo_projects.wiki-opensearch.producer_wikimedia.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="consumer_opensearch: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="demo_projects/wiki-opensearch/consumer_opensearch/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="consumer_opensearch.opensearch: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="opensearch" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="demo_projects/wiki-opensearch/consumer_opensearch/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Application.OpenSearchConsumer" />
       <item itemvalue="Application.WikimediaChangesProducer" />
       <item itemvalue="Application.Consumer_CooperativeRebalance" />
-      <item itemvalue="Application.ConsumerDemo" />
-      <item itemvalue="Application.Consumer_GraceShutDown" />
-      <item itemvalue="Application.Producer_Keys" />
+      <item itemvalue="Docker.consumer_opensearch.opensearch: Compose Deployment" />
+      <item itemvalue="Docker.consumer_opensearch: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WikimediaChangesProducer" />
+        <item itemvalue="Application.OpenSearchConsumer" />
+        <item itemvalue="Docker.consumer_opensearch.opensearch: Compose Deployment" />
+        <item itemvalue="Docker.consumer_opensearch: Compose Deployment" />
         <item itemvalue="Application.Consumer_CooperativeRebalance" />
-        <item itemvalue="Application.Producer_Keys" />
-        <item itemvalue="Application.Consumer_GraceShutDown" />
-        <item itemvalue="Application.ConsumerDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658939174271</updated>
-      <workItem from="1658939177115" duration="15864000" />
+      <workItem from="1658939177115" duration="20713000" />
     </task>
     <servers />
   </component>

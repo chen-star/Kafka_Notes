@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/basics" />
             <option value="$PROJECT_DIR$/demo_projects" />
             <option value="$PROJECT_DIR$/demo_projects/wiki-opensearch" />
+            <option value="$PROJECT_DIR$/demo_projects/wiki-opensearch/consumer_opensearch" />
             <option value="$PROJECT_DIR$/demo_projects/wiki-opensearch/producer_wikimedia" />
           </set>
         </option>

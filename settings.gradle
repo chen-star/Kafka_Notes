@@ -5,4 +5,6 @@ include 'demo_projects:wiki-opensearch'
 findProject(':demo_projects:wiki-opensearch')?.name = 'wiki-opensearch'
 include 'demo_projects:wiki-opensearch:producer_wikimedia'
 findProject(':demo_projects:wiki-opensearch:producer_wikimedia')?.name = 'producer_wikimedia'
+include 'demo_projects:wiki-opensearch:consumer_opensearch'
+findProject(':demo_projects:wiki-opensearch:consumer_opensearch')?.name = 'consumer_opensearch'
 
