@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikiMediaChangeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658939174271</updated>
-      <workItem from="1658939177115" duration="13241000" />
+      <workItem from="1658939177115" duration="15864000" />
     </task>
     <servers />
   </component>

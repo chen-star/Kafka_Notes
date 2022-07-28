@@ -85,7 +85,12 @@
   * acks=all
 
 #### Message Compression at Producer
-
+* Compression on a batch of messages.
+* `compression.type` can be none(default), gzip, lz4, snappy, zstd
+* Consider tweaking `linger.ms` and `batch.size` to have bigger batches.
+  * By default, Kafka producers try to send records ASAP.
+  * linger.ms (default 0): how long to wait till we send a batch.
+  * batch.size (default 16KB): if a batch is filled before linger.ms, increase the batch size.
 
 ---
 
