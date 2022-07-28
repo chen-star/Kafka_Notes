@@ -147,3 +147,15 @@
 
 ## CLI Commands
 [commands.md](CLI_commands.md)
+
+
+## Kafka Connect
+* Solves External Source => Kafka and Kafka => External Sink
+
+
+## Kafka Stream
+* Solves transformations Kafka => Kafka
+
+
+## Kafka Schema Registry
+* Using Schema in Kafka
