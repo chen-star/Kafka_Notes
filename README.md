@@ -150,11 +150,41 @@
 
 
 ## Kafka Connect
-* Solves External Source => Kafka and Kafka => External Sink
+
+![](images/connect_0.png)
+
+* What is Kafka Connect?
+  * Simplify and improve getting data in and out of Kafka.
+  * Source => Kafka | Producer API | Kafka Connect Source
+  * Kafka => Sink / App | Consumer API | Kafka Connect Sink
+* Definitions:
+  * Kafka Connect Cluster has multiple loaded **Connectors**
+    * Each connector is a re-usable piece of code (java jars)
+    * Many connectors exist in the open source world, leverage them
+  * Connectors + **User Configuration** => **Tasks**
+    * A task is linked to a connector config
+    * A job config may spawn multiple tasks
+  * Tasks are executed by Kafka Connect **Workers**(servers)
+    * A worker is a single java process
+    * A worker can be standalone or in a cluster
+
+* 2 modes for Kafka Connect Deployment
+  * Standalone
+    * A single process runs your connectors and tasks
+    * Config is bundled with your process
+    * Not fault-tolerant, no scalability, hard to monitor
+
+  * Distributed
+    * Multiple workers run your connectors and tasks
+    * Config is submitted using a REST API
+    * Easy to scale, and fault-tolerant (re-balancing in case a worker dies)
+
+  ![](images/connect_1.png)
 
 
 ## Kafka Stream
 * Solves transformations Kafka => Kafka
+  * Kafka => Kafka | Consumer, Producer API | Kafka Streams
 
 
 ## Kafka Schema Registry
