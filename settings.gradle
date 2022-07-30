@@ -7,4 +7,7 @@ include 'demo_projects:wiki-opensearch:producer_wikimedia'
 findProject(':demo_projects:wiki-opensearch:producer_wikimedia')?.name = 'producer_wikimedia'
 include 'demo_projects:wiki-opensearch:consumer_opensearch'
 findProject(':demo_projects:wiki-opensearch:consumer_opensearch')?.name = 'consumer_opensearch'
+include 'kafka_connect'
+include 'kafka_connect:github-kafka-connect'
+findProject(':kafka_connect:github-kafka-connect')?.name = 'github-kafka-connect'
 

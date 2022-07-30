@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/consumer_opensearch/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/consumer_opensearch/src/main/java/OpenSearchConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikiMediaChangeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/producer_wikimedia/src/main/java/WikiMediaChangeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_projects/wiki-opensearch/src/main/java/WikimediaChangesProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo_projects/wiki-opensearch/producer_wikimedia/src/main/java/WikimediaChangesProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,22 +52,28 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CXBi7mVzyUW6yoQ5clVVYIOP7r" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "jdk.selected.JAVA_MODULE": "1.8",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka_connect" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -149,7 +152,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658939174271</updated>
-      <workItem from="1658939177115" duration="20713000" />
+      <workItem from="1658939177115" duration="31324000" />
+      <workItem from="1659140382249" duration="4417000" />
+      <workItem from="1659151891003" duration="1381000" />
+      <workItem from="1659196690735" duration="20000" />
     </task>
     <servers />
   </component>
@@ -166,5 +172,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -15,6 +16,8 @@
             <option value="$PROJECT_DIR$/demo_projects/wiki-opensearch" />
             <option value="$PROJECT_DIR$/demo_projects/wiki-opensearch/consumer_opensearch" />
             <option value="$PROJECT_DIR$/demo_projects/wiki-opensearch/producer_wikimedia" />
+            <option value="$PROJECT_DIR$/kafka_connect" />
+            <option value="$PROJECT_DIR$/kafka_connect/github-kafka-connect" />
           </set>
         </option>
       </GradleProjectSettings>

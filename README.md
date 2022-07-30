@@ -148,6 +148,8 @@
 ## CLI Commands
 [commands.md](CLI_commands.md)
 
+---
+---
 
 ## Kafka Connect
 
@@ -181,11 +183,15 @@
 
   ![](images/connect_1.png)
 
+---
+---
 
 ## Kafka Stream
 * Solves transformations Kafka => Kafka
   * Kafka => Kafka | Consumer, Producer API | Kafka Streams
 
+---
+---
 
 ## Kafka Schema Registry
 * Using Schema in Kafka
