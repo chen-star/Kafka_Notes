@@ -17,7 +17,7 @@
 
 * Create: 
 ~~~shell
-    kafka-topics --bootstrap-server localhost:9092 --create --topic first_topic --partitions 3 --replication-factor 1
+    kafka-topics --bootstrap-server localhost:9092 --create --partitions 3 --replication-factor 1 --topic first_topic
 ~~~
 
 * Describe: 

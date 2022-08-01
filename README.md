@@ -189,7 +189,176 @@
 ## Kafka Stream
 * Solves transformations Kafka => Kafka
   * Kafka => Kafka | Consumer, Producer API | Kafka Streams
+* Easy data processing and transformation lib within Kafka
+  * Standard Java Application
+  * No need to create a separate cluster
+  * Highly scalable, elastic and fault-tolerant
+  * Exactly once capabilities
+  * One record at a time processing (no batching)
+    * Spark and Flink are micro-batching processing
+  * Works for any application size
 
+
+* Terminologies
+  * A **stream** is a seq of immutable data records, that fully ordered, can be replayed, and is fault-tolerant
+  * A **stream processor** is a nde in the processor topology. It transforms incoming streams, record by record, and may create a new stream from it.
+    * A **source processor** is a special processor that takes its data directly from a Kafka topic. It has no predecessors in a topology, and doesn't transform data.
+    * A **sink processor** is a processor that doesn't have children, it sends the stream data directly to a Kafka topic.
+  * A **topology** is a graph of processors chained together by streams.
+
+
+* Concepts
+  * KStreams
+    * All inserts, similar to a log
+    * Infinite, unbounded data streams
+  ~~~
+  Topic (key, value)              KStreams
+  (alice, 1)              |       (alice, 1)
+                          |
+  (marc, 4)               |       (alice, 1)
+                          |       (marc, 4)
+                          |
+  (alice, 2)              |       (alice, 1)
+                          |       (marc, 4)
+                          |       (alice, 2)
+  ~~~
+  
+  * KTables
+    * All upserts on non-null
+    * Deletes on null values
+    * Similar to a table
+    * Parallel with log compacted topics
+  ~~~
+  Topic (key, value)              KTables
+  (alice, 1)              |       (alice, 1)
+                          |
+  (marc, 4)               |       (alice, 1)
+                          |       (marc, 4)
+                          |
+  (alice, 2)              |       (alice, 2)
+                          |       (marc, 4)
+                          |     
+  (marc, null)            |       (alice, 2)
+                          |       # marc is deleted 
+  ~~~
+  
+  * When to use: KStreams v.s KTables
+    * KStreams reading from a topic that's not compacted; KTable reading from a topic that's log-compacted(aggregations)
+    * KStreams if new data is partial information / transactional; KTables more if you need a structure that's like a DB table, where every update is self-sufficient.
+
+  
+  * Stateless v.s. Stateful operations
+    * Stateless: the result of a transformation only depends on the data-point you process
+    * Stateful: the result of a transformation also depends on an external information
+
+    * Stateless Operations
+      * `mapValues() / map()`
+        * Takes 1 record and produces 1 record.
+        * mapValues():
+          * affects values (does not change keys == does not trigger a re-partition)
+          * for KStreams and KTables
+        * map():
+          * affects both keys and values (trigger a re-partition)
+          * for KStreams only
+      * `filter() / filterNot()`
+        * Takes 1 record and produces 0 or 1 record.
+        * filter():
+          * does not change keys / values (does not trigger a re-partition)
+          * for KStreams and KTables
+        * filterNot():
+          * inverse of filter()
+      * `faltMapValues() / flatMap()`
+        * Takes 1 record and produces 0 or 1 or more record.
+        * `flatMapValues()`
+          * does not change keys (does not trigger a re-partition)
+          * for KStreams only
+          ~~~java
+          // split s sentence into words
+          KStreams<String, String> words = sentences.flatMapValues(value -> Arrays.asList(value.split("\\s+")));
+          ~~~
+          ~~~
+          (alex, alex is nice) 
+          =>
+          (alex, alex)
+          (alex, is)
+          (alex, nice)
+          ~~~
+        * `flatMap()`
+          * change keys 
+          * for KStreams only
+      * `branch()`
+        * branch() splits a KStream based on 1 or more predicates
+        * Predicates are evaluated in order, if no matches, records are dropped
+        ~~~java 
+        KStream<String, Long>[] branches = stream.branch(
+          (k, v) -> v > 100, // 1st branch
+          (k, v) -> v > 10, // 2nd branch
+          (k, v) -> v > 0 // 3rd branch
+        );
+        ~~~
+        ~~~
+        data stream         branch[0]         branch[1]         branch[2]         dropped
+        (alex, 1)           (alex, 200)       (alex, 20)        (alex, 1)         (alex, -10)
+        (alex, 20)                                              (alex, 9)
+        (alex, 200)
+        (alex, 9)
+        (alex, -10)
+        ~~~
+      * `selectKey()`
+        * assign a new key to the record (from old key and val) (trigger re-partition)
+        * best practice is to isolate that transformation to know exactly where the partition happens
+
+      * Read from Kafka
+        * as KStream
+        ~~~java
+        KStream<String, Long> wordCounts = builder.stream(
+          Serdes.String(), // key
+          Serdes.Long(), // val
+          "word-count-input-topic" // input topic
+        );
+        ~~~
+        * as KTable
+          ~~~java
+          KTable<String, Long> wordCounts = builder.table(
+            Serdes.String(), // key
+            Serdes.Long(), // val
+            "word-count-input-topic" // input topic
+          );
+          ~~~
+        * as GlobalKTable
+          ~~~java
+          GlobalKTable<String, Long> wordCounts = builder.globalTable(
+            Serdes.String(), // key
+            Serdes.Long(), // val
+            "word-count-input-topic" // input topic
+          );
+          ~~~
+        
+      * Write to Kafka
+        * write KStream or KTable
+          * To: terminal operation - write the records to a topic
+          ~~~java
+          stream.to("output-topic");
+          table.to("output-topic");
+          ~~~
+          * Through: write to a topic and get a stream / table from the topic
+          ~~~java
+          KStream<String, Long> newStream = stream.through("user-clicks-topic");
+          KTable<String, Long> newTable = table.through("user-clicks-topic");
+          ~~~
+
+      * KStream <=> KTable
+      ~~~java
+      // table -> stream
+      KTable<byte[], String> stream = table.toStream();
+      
+      // stream -> table
+      // option 1: groupByKey() + aggregation
+      KTable<String, Long> table = stream.groupByKey().count();
+      // option 2: write back to Kafka & read as KTable
+      stream.to("temp-topic");
+      KTable<String, Long> table = builder.table("temp-topic");
+      ~~~
 ---
 ---
 
