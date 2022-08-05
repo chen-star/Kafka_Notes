@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka_stream/count-color/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka_stream/count-color/src/main/java/org/example/FavouriteColourApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka_stream/count-color/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/src/main/java/org/example/BankBalanceProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/src/main/java/org/example/ExactlyOnceApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka_stream/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka_stream/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
     "last_directory_selection": "/Users/alexchen/Documents/learning/kafka/kafka/kafka_stream/word-count/src/main/java/org/example",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "terminal"
@@ -85,10 +87,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FavouriteColourApp">
-    <configuration name="FavouriteColourApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.FavouriteColourApp" />
-      <module name="count-color" />
+  <component name="RunManager" selected="Application.ExactlyOnceApp">
+    <configuration name="BankBalanceProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.BankBalanceProducer" />
+      <module name="bank-balance" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -99,9 +101,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OpenSearchConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OpenSearchConsumer" />
-      <module name="kafka.demo_projects.wiki-opensearch.consumer_opensearch.main" />
+    <configuration name="ExactlyOnceApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ExactlyOnceApp" />
+      <module name="bank-balance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FavouriteColourApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.FavouriteColourApp" />
+      <module name="count-color" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,33 +147,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="consumer_opensearch.opensearch: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="opensearch" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="basics/wiki-opensearch/consumer_opensearch/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Application.BankBalanceProducer" />
+      <item itemvalue="Application.ExactlyOnceApp" />
       <item itemvalue="Application.FavouriteColourApp" />
       <item itemvalue="Application.org.example.StreamStarterApp" />
-      <item itemvalue="Application.OpenSearchConsumer" />
       <item itemvalue="Application.WikimediaChangesProducer" />
-      <item itemvalue="Docker.consumer_opensearch.opensearch: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExactlyOnceApp" />
+        <item itemvalue="Application.BankBalanceProducer" />
         <item itemvalue="Application.FavouriteColourApp" />
         <item itemvalue="Application.org.example.StreamStarterApp" />
         <item itemvalue="Application.WikimediaChangesProducer" />
-        <item itemvalue="Application.OpenSearchConsumer" />
-        <item itemvalue="Docker.consumer_opensearch.opensearch: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +178,8 @@
       <workItem from="1659196690735" duration="8343000" />
       <workItem from="1659284450538" duration="1416000" />
       <workItem from="1659285883644" duration="5885000" />
-      <workItem from="1659402281333" duration="2206000" />
+      <workItem from="1659402281333" duration="2744000" />
+      <workItem from="1659628002509" duration="3749000" />
     </task>
     <servers />
   </component>

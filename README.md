@@ -142,6 +142,15 @@
   * Can be achieved for Kafka => Kafka workflows using the Transactional API.
   * For Kafka => Sink workflows, use an idempotent consumer.
 
+
+* Exactly once in Kafka
+  * What is exactly once?
+    * The ability to guarantee that data processing on each message will happen only once, and that pushing the message back to Kafka will also happen effectively only once (Kafka will de-dup)
+    * Guaranteed when both input and output system is Kafka, not for Kafka to any external systems
+  * How Kafka solve?
+    * Producers are idempotent
+    * You can write multiple messages to different Kafka topics as part of 1 txn
+
 ---
 ---
 
@@ -359,6 +368,10 @@
       stream.to("temp-topic");
       KTable<String, Long> table = builder.table("temp-topic");
       ~~~
+      
+    * Stateful Operations
+      * `groupBy` in KTable
+      * `peek()` in KStream
 ---
 ---
 
