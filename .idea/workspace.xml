@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58abc1bb-ddd5-4e4f-ade6-8c38fbb11a04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/src/main/java/org/example/BankBalanceProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/src/main/java/org/example/ExactlyOnceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka_stream/bank-balance/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka_stream/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka_stream/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +173,7 @@
       <workItem from="1659284450538" duration="1416000" />
       <workItem from="1659285883644" duration="5885000" />
       <workItem from="1659402281333" duration="2744000" />
-      <workItem from="1659628002509" duration="3749000" />
+      <workItem from="1659628002509" duration="4755000" />
     </task>
     <servers />
   </component>
